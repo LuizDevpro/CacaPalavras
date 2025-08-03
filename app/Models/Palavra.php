@@ -9,10 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Palavra extends Model
 {
     use HasFactory;
-    use SoftDeletes;
+    public $timestamps = false;
 
-    protected $fillable = [
-        'palavra',
-        'dica',
-    ];
+    protected $fillable = ['palavra','dica'];
 }
